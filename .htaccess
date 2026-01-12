@@ -1,8 +1,0 @@
-# Remove UTM parameters from URLs
-<IfModule mod_rewrite.c>
-RewriteEngine On
-
-# Remove specific UTM parameters pattern
-RewriteCond %{QUERY_STRING} (^|&)(utm_source|utm_campaign|utm_medium|utm_content|utm_term)=
-RewriteRule ^(.*)$ $1? [R=301,L]
-</IfModule>
